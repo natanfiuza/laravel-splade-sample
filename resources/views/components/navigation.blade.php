@@ -51,6 +51,12 @@
                 <x-responsive-nav-link href="{{ route('docs') }}" :active="request()->routeIs('docs')">
                     {{ __('Documentation') }}
                 </x-responsive-nav-link>
+                <x-responsive-nav-link href="{{ route('docs.toggle') }}" :active="request()->routeIs('docs.toggle')">
+                    {{ __('Docs Toggle') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link href="{{ route('blogs') }}" :active="request()->routeIs('blogs')">
+                    {{ __('Blogs') }}
+                </x-responsive-nav-link>
             </div>
         </div>
     </nav>

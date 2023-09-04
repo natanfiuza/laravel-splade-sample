@@ -13,7 +13,7 @@
         </x-splade-toggle>
         <hr class="mt-5 mb-5">
         <p class="text-2xl font-bold mb-2">Use x-splade-data</p>
-        <x-splade-data :default="['show' => true]">
+        <x-splade-data :default="['show' => true]" remember="content" local-storage>
             <button v-show="!data.show" @click="data.show = true" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" >Show more</button>
             <button v-show="data.show" @click="data.show = false" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" >Show less</button>
             <p v-show="!data.show" class>Short content...</p>
