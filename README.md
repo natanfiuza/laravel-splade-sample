@@ -18,6 +18,11 @@ Splade fornece uma maneira **super fácil** de construir aplicativos de página 
 
 Abaixo o passo a passo para criar um novo projeto usando o SPLADE
 
+
+
+
+
+
 Criar um novo projeto laravel
 
 ```bash
@@ -38,6 +43,29 @@ Instalar no Laravel
 php artisan splade:install
 
 ```
+
+Fazer uma copia de `.env.example` para `.env`
+
+```bash
+php artisan key:generate
+```
+
+Crie o banco de dados `test_splade`
+
+```bash
+php artisan migrate
+```
+Verifique no arquivo `DatabaseSeeder.php` se a linha abaixo esta descomentada, para criar uma lista de 10 usuarios ficticios.
+```php
+\App\Models\User::factory(10)->create();
+```
+
+Execute o seed para popular a tabela  `users`
+```bash
+php artisan db:seed
+
+```
+
 
 ```bash
 npm install
